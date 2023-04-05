@@ -14,7 +14,7 @@ const selectingDrivers = [
     returnFirstTwoDrivers = function(array) {
             return array.slice(0,2);
      },
-     
+
      returnLastTwoDrivers= function(array) {
         var array1 = [array[array.length-2], array[array.length-1]];
         return array1;
@@ -23,13 +23,17 @@ const selectingDrivers = [
 
 
 function createFareMultiplier(mult){
-    return function (value){
+    return function multiplied(value){
         return value*mult;
     };
     
 }
 
+
 function fareDoubler(number){
+    //console.log(number);
+    const doubledFare = createFareMultiplier(number);
+    //console.log(doubledFare);
     return number *2;
 }
 
